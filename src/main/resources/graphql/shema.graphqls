@@ -1,0 +1,21 @@
+type Movie {
+    id: ID!
+    name: String
+    ganre: Ganre
+}
+
+enum Ganre {
+    ACTION, HORROR, MELODRAMA, HISTORY
+}
+
+type Query {
+    findAll: [Movie]!
+    findOne(id: ID): Movie
+}
+
+type Mutation {
+    create(name: String, ganre: Ganre): Movie
+    update(id: Int, name: String, ganre: Ganre): Movie
+    delete(id: ID!): Movie
+}
+
