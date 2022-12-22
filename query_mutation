@@ -1,0 +1,40 @@
+# query {
+#   findAll{
+#     id
+#     name
+#     ganre
+#   }
+# }
+
+# query {
+#   findOne(id:2){
+#     id
+#     name
+#     ganre
+#   }
+# }
+
+# mutation {
+#   create(name: "Titanic", ganre: HISTORY){
+#     id
+#     name
+#     ganre
+#   }
+# }
+
+
+
+# mutation {
+#   update(id: 5, name: "Jocker", ganre: ACTION) {
+#     id
+#     name
+#     ganre    
+#   }
+# }
+
+mutation {
+  delete(id:5) {
+    name
+    ganre
+  }
+}
